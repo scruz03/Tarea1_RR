@@ -34,7 +34,7 @@ summary(data)
 daily_steps <- aggregate(steps ~ date, data, sum)
 hist(daily_steps$steps, main = "Total steps per day", xlab = "Number of steps", col = "red")
 ```
-![alt text] 
+![alt text] (https://github.com/scruz03/Tarea1_RR/blob/master/Plot1.png)
 
 ### Calculate and report the mean and median of the total number of steps taken per day
 
