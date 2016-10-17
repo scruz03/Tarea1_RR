@@ -53,7 +53,7 @@ paste("The median is",steps_median)
 daily_interval <- aggregate(steps ~ interval, data, mean)
 plot(daily_interval$steps, type = "l", main = "Average daily activity", xlab = "Interval", ylab = "Average number of steps", col = "green")
 ```
-
+![alt text](https://github.com/scruz03/Tarea1_RR/blob/master/Plot2.png)
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -92,6 +92,7 @@ data_filled$steps[is.na(data_filled$steps)] <- mean(data$steps,na.rm = TRUE)
 daily_steps_2 <- aggregate(steps ~ date, data_filled, sum)
 hist(daily_steps_2$steps, main = "Total steps per day filled missing data", xlab = "Number of steps", col = "blue")
 ```
+![alt text](https://github.com/scruz03/Tarea1_RR/blob/master/Plot3.png)
 
 ## Mean and Median
 ```{r , echo=TRUE}
@@ -124,5 +125,7 @@ daily_steps_3 <- aggregate(steps ~ interval+ wkd, data, mean)
 library(ggplot2)
 qplot(interval, steps, geom = "line", data = daily_steps_3, color = wkd)+ggtitle(expression("Average steps per interval: Weekdays versus Weekends"))
 ```
+
+![alt text](https://github.com/scruz03/Tarea1_RR/blob/master/Plot4.png)
 
 There is a difference in the pattern of activity between weekdays and weekends. During the weekdays there is higher average steps in the range of intervals below 1000. However, during the weekends the activity is in general higher above the interval 1000.
