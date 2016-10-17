@@ -1,4 +1,4 @@
-# Tarea 1
+# Project 1
 ---
 title: "Project1"
 author: "Sergio Cruz"
@@ -34,6 +34,7 @@ summary(data)
 daily_steps <- aggregate(steps ~ date, data, sum)
 hist(daily_steps$steps, main = "Total steps per day", xlab = "Number of steps", col = "red")
 ```
+![alt text] 
 
 ### Calculate and report the mean and median of the total number of steps taken per day
 
